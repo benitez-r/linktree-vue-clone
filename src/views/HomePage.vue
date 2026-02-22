@@ -38,8 +38,8 @@ const profile = ref({
 
     <!-- Navigate to Info -->
     <RouterLink
-      to="/Info"
-      class="text=sm mt-8 text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
+      to="/info"
+      class="mt-8 text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
       >About Me →</RouterLink
     >
   </main>
