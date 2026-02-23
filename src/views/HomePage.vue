@@ -6,6 +6,29 @@ const profile = ref({
   name: 'RUBY BENITEZ',
   slogan: 'Special Ed. Teacher and Advanced Web Designer',
   avatar: 'https://api.dicebear.com/9.x/fun-emoji/svg?seed=Brian',
+  links: [
+    {
+      id: 1,
+      title: 'GitHub',
+      url: 'https://github.com/benitez-r',
+      icon: 'code',
+      description: 'Check out my projects',
+    },
+    {
+      id: 2,
+      title: 'Linkedin',
+      url: 'https://linkedinbenitez-r',
+      icon: 'briefcase',
+      description: 'Connect with me professionally',
+    },
+    {
+      id: 3,
+      title: 'Expense Splitter',
+      url: 'https://expense-splitter-vue.benitez-r.workers.dev/',
+      icon: 'calculator',
+      description: 'Calculate your expenses using my ExpenseSplitter',
+    },
+  ],
 })
 </script>
 
@@ -31,8 +54,12 @@ const profile = ref({
     <!-- Link List -->
     <div class="flex w-full max-w-md flex-col gap-4">
       <LinkCard
-        v-for="x of [1, 2, 3]"
-        :key="x"
+        v-for="link in profile.links"
+        :key="link.id"
+        :title="link.title"
+        :url="link.url"
+        :description="link.description"
+        :icon="link.icon"
       />
     </div>
 
